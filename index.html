@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmetic Brand</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="icon" type="image/png" href="img/img02.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    
+    <header>
+    <div class="logo">GlowCos</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+           <a href="#">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+    </nav>
+</header>
+        <!-- nav.js tuggle menu -->
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("nav-active");
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero">
+    <h1 class="hero-title">Beauty That Feels Natural</h1>
+    <p class="hero-text">Discover skincare and cosmetics you can trust.</p>
+</section>
+
+            <!-- hero title randomizer js -->
+<script>
+    const heroTitles = [
+        "Beauty That Feels Natural",
+        "Glow With Confidence",
+        "Elegance Made Simple",
+        "Your Beauty, Your Style",
+        "Where Glow Meets Comfort"
+    ];
+    const randomTitle = heroTitles[Math.floor(Math.random() * heroTitles.length)];
+    document.querySelector(".hero-title").textContent = randomTitle;
+</script>
+
+
+
+
+
+
+
+
+
+
+    <section class="products">
+        <h2>Our Best Sellers</h2>
+
+        <div class="product-grid">
+            <div class="card">
+                <a href="makeup.html">
+                <img src="makeup.jpg" alt="product">
+                </a>
+                <h3>Make up Products</h3>
+                 <a href="makeup.html">
+                <!-- <button class="btn small">More</button> -->
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="watches.html">
+                <img src="watches.png" alt="product">
+                </a>
+                <h3>Grils Watches Products</h3>
+                 <a href="watches.html">
+                <!-- <button class="btn small">More</button> -->
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="facewh.html">
+                <img src="facewash.jpg" alt="product">
+                </a>
+                <h3>Face Wash Product</h3>
+                <!-- <a href="facewh.html"><button class="btn small">More</button></a> -->
+            </div>
+
+
+             <div class="card">
+              <a href="parfum.html">
+                <img src="perfurm.jpg" alt="product">
+                </a>
+                <h3>Parfum Products</h3>
+                <!-- <a href="parfum.html"><button class="btn small">More</button></a> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer  section -->
+<footer class="footer-section">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h5 class="footer-title">GlowCos</h5>
+      <p>GlowCos brings you premium skincare and cosmetics to enhance your natural beauty. Everything you need to glow every day.</p>
+    </div>
+
+    <div class="footer-links">
+      <h5 class="footer-title">Quick Links</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="parfum.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-contact">
+      <h5 class="footer-title">Contact</h5>
+      <p>📍 Karachi, Pakistan</p>
+      <p>✉ info@glowcos.com</p>
+      <p>📞 +92 335 1234567</p>
+    </div>
+
+
+    <div class="footer-social">
+      <h5 class="footer-title">Follow Us</h5>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/yourpage" target="_blank">FB</a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank">IG</a>
+        <a href="https://twitter.com/yourprofile" target="_blank">TW</a>
+        <a href="https://www.pinterest.com/yourprofile" target="_blank">PT</a>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="footer-line">
+  <div class="footer-copy">
+    © 2025 GlowCos — All Rights Reserved
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

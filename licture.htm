@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <link rel="icon" type="image/png" href="img/img02.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture</title>
+
+<style>
+body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top left, #ffe6f0, #ff99cc);
+    font-family: 'Playfair Display', serif;
+    text-align:center;
+    overflow:hidden;
+}
+
+h1 {
+    font-size:70px;
+    color:#E48AAE;
+    margin:0;
+    animation: bounceColor 2s infinite, shadowPulse 2s infinite;
+}
+
+
+p {
+    font-size:26px;
+    color:#333;
+    margin-top:20px;
+    opacity:0;
+    animation: fadeSlide 1.5s forwards 0.5s;
+}
+
+/* Keyframes for heading bounce + color change */
+@keyframes bounceColor {
+    0%, 100% { transform: translateY(0); color:#E48AAE; }
+    25% { transform: translateY(-15px); color:#FF66B2; }
+    50% { transform: translateY(-30px); color:#FF3399; }
+    75% { transform: translateY(-15px); color:#FF66B2; }
+}
+
+/* Heading shadow pulse */
+@keyframes shadowPulse {
+    0%, 100% { text-shadow: 2px 2px 5px #fff0f5; }
+    50% { text-shadow: 4px 4px 15px #ff99cc; }
+}
+
+/* Paragraph fade + slide up */
+@keyframes fadeSlide {
+    0% { opacity:0; transform: translateY(20px); }
+    100% { opacity:1; transform: translateY(0); }
+}
+
+/* Back Button */
+button {
+    margin-top:50px;
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    background:#E48AAE;
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#c86b9a;
+    transform:scale(1.05);
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Your Account Balance: 0 😆</h1>
+<p>Better luck next time, champ!</p>
+
+<button onclick="goBack()">Back</button>
+
+<script>
+function goBack() {
+
+    window.location.href = 'products.html';
+}
+</script>
+
+
+</body>
+</html>

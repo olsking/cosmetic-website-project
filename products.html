@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowCos Products</title>
+<link rel="stylesheet" href="products.css">
+ <link rel="icon" type="image/png" href="img/img02.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVBAR SECTION -->
+<header>
+    <div class="logo">GlowCos</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+</header>
+ <!-- nav tuggle menu -->
+<script>
+function toggleMenu(){ 
+    document.querySelector(".nav-links").classList.toggle("nav-active"); 
+}
+</script>
+
+
+
+
+
+<!-- Hero SECTION -->
+<section class="hero">
+    <h1>GlowCos Products</h1>
+    <p>Shop by category for all your beauty needs.</p>
+</section>
+<!------------------------------------- Categories ------------------------------------------------------------------------->
+<section class="categories">
+    <button class="active" onclick="filterCategory('all')">All</button>
+                    <!-- EXAMPLES FOR FILTER CATEGORY -->
+    <button onclick="filterCategory('makeup')">Makeup</button>
+    <button onclick="filterCategory('parfum')">Parfum</button>
+    <button onclick="filterCategory('Face Wash')">Face Wash</button>
+    <button onclick="filterCategory('watches')">Watches</button>
+</section>
+ <!----------------------------- JS filterCategory Function --------------------------------------------------------------->
+<script>
+
+function filterCategory(cat){
+    const cards = document.querySelectorAll('.product-grid .card');
+    cards.forEach(card=>{
+        if(cat==='all' || card.dataset.category===cat){
+            card.style.display='flex';
+        } else {
+            card.style.display='none';
+        }
+    });
+    document.querySelectorAll('.categories button').forEach(btn=>btn.classList.remove('active'));
+    event.target.classList.add('active');
+}
+</script>
+<!----------------------------- Product Grid Section --------------------------------------------------------------->
+
+
+
+<section class="products">
+    <div class="product-grid" id="productGrid">
+                   <!-- js data category= filter category name EXAMPLES
+                   MAKEUP, FILTER CATEGORY NAME makeup -->
+               <div class="card" data-category="Face Wash">
+                <img src="Acure Brightening Facial Scrub - Exfoliating Face Wash, Gentle Daily.jpg" alt="Lip Gloss">
+                <h3>Acure Brightening Facial Scrub - Exfoliating Face Wash, Gentle Daily</h3>
+                <p>Rs. 1200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="makeup">
+                <img src="mk01.webp" alt="Lip Gloss">
+                <h3>Lancome Lush Powder Makeup Brush</h3>
+                <p>Rs. 1200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="parfum">
+                <img src="ALT. FRAGRANCES Executive No. 26 Extrait de Parfum Men.jpg" alt="Lip Gloss">
+                <h3>FRAGRANCES Executive No. 26 Extrait de Parfum Men</h3>
+                <p>Rs. 8000</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="watches">
+                <img src="Round Pointer Quartz Watch.jpg" alt="Face Serum">
+                <h3>ST London Premium Ultra-</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+        
+            <div class="card" data-category="parfum">
+                <img src="Magnetiq Eau De Parfum, Woody Aromatic Fragrance.jpg" alt="Blush">
+                <h3>Magnetiq Eau De Parfum, Woody Aromatic Fragrance</h3>
+                <p>Rs. 5000</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="watches">
+                <img src="1pc Rhinestone Decor Quartz Watch & 1pc Bracelet.jpg" alt="Lipstick">
+                <h3>Flormar Eye Shadow Palette</h3>
+                <p>Rs. 2400</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            
+             <div class="card" data-category="watches">
+                <img src="Rhinestone Decor Strap Quartz Watch.jpg" alt="Lipstick">
+                <h3>Rivaj UK Starlit Sparkle 9 Color Glitter Palette</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="Face Wash">
+                <img src="Aveeno Positively Radiant Skin Brightening Exfoliating Daily Facial Scrub.jpg" alt="Compact Powder">
+                <h3>Aveeno Positively Radiant Skin Brightening Exfoliating Daily Facial Scrub</h3>
+                <p>Rs. 1500</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="parfum">
+                <img src="Aromatix Forbidden Fruit Eau De Parfum, Oriental Floral Fragrance.webp" alt="Eyeliner">
+                <h3>Aromatix Forbidden Fruit Parfum, Oriental Fragrance</h3>
+                <p>Rs. 7800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card "data-category="Face Wash">
+                <img src="ANUA Heartleaf Quercetinol Pore Deep Cleansing Foam, Facial Cleanser.jpg" alt="Face Serum">
+                <h3>ANUA Heartleaf Quercetinol Pore Deep Cleansing Foam, Facial Cleanser</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="Face Wash">
+                <img src="Exfoliating Face Wash, Extra Gentle Daily Face Scrub, Gently Exfoliates.jpg" alt="Lipstick">
+                <h3>Exfoliating Face Wash, Extra Gentle Daily Face Scrub, Gently Exfoliates</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="Face Wash">
+                <img src="Face Scrub and Face Wash, Gentle Exfoliating, Cleansing Facial.jpg" alt="Lipstick">
+                <h3>Face Scrub and Face Wash, Gentle Exfoliating, Cleansing</h3>
+                <p>Rs. 1200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            
+            <div class="card" data-category="Face Wash">
+                <img src="Yes To Grapefruit Daily Facial Scrub & Cleanser, Exfoliating & Restoring Cleanser.jpg" alt="Lipstick">
+                <h3>Grapefruit Daily Facial Scrub & Cleanser, Restoring Cleanser</h3>
+                <p>Rs. 2400</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            
+            <div class="card" data-category="Face Wash">
+                <img src="ELEMIS Dynamic Resurfacing Facial Wash.jpg" alt="Lipstick">
+                <h3>ELEMIS Dynamic Resurfacing Facial Wash and Face Scrub Eucalyptus Deeply</h3>
+                <p>Rs. 1900</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            
+            <div class="card" data-category="parfum">
+                <img src="Essential 4 PC Mini Perfume Set, Birthday Gift Set for Women.jpg" alt="Lipstick">
+                <h3>Essential 4 PC Mini Perfume, Birthday Gift Set for Women</h3>
+                <p>Rs. 6500</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            
+            <div class="card" data-category="makeup">
+                <img src="Kaligon Beauty Organizer, 8009.jpg" alt="Lipstick">
+                <h3>Kaligon Beauty Organizer</h3>
+                <p>Rs. 1900</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="parfum">
+                <img src="Ard al Zaafaran Pink Blush Shams Al Emarat Khususi, Marshmallow Blush Perfume For Women.jpg" alt="Face Serum">
+                <h3>Zaafaran Pink Blush Al Emarat Khususi Perfume For Women</h3>
+                <p>Rs. 36080</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+          
+            <div class="card" data-category="makeup">
+                <img src="Makeup Revolution Ultra Blush Palette, Sunset Burst, 8-Pack.jpg" alt="Lipstick">
+                <h3>Makeup Revolution Ultra Blush Palette</h3>
+                <p>Rs. 1200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card" data-category="parfum">
+                <img src="Swiss Arabian Vanilla 01 Extrait De Parfum 75 ml.jpg" alt="Lipstick">
+                <h3>Swiss Arabian Vanilla 01 Extrait De Parfum 75 ml Aromatic Fragrance</h3>
+                <p>Rs. 8700</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="makeup">
+                <img src="Sara Ali Eye Lashes, Black Dreamy Lit.webp" alt="Lipstick">
+                <h3>Sara Ali Eye Lashes, Black Dreamy Lite</h3>
+                <p>Rs. 1000</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+              <div class="card" data-category="parfum">
+                <img src="Aromatix Teas Me Extrait de Parfum, Oriental Woody Fragrance.jpg" alt="Lipstick">
+                <h3>Aromatix Teas Me Extrait de Parfum,Fragrance</h3>
+                <p>Rs. 2400</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="makeup">
+                <img src="Rivaj UK Starlit Sparkle 9 Color Glitter Palette, 02, 9g.webp" alt="Lipstick">
+                <h3>Rivaj UK Starlit Sparkle 9 Color Glitter Palette</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="burlan guzelligi saka.jpg" alt="Lipstick">
+                <h3>Sara Ali Eye Lashes, Black Dreamy Lite</h3>
+                <p>Rs. 1000</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+         
+            <div class="card" data-category="parfum">
+                <img src="Armaf Club De Nuit for Women Eau de Parfum Spray, 3.6 Ounce.jpg" alt="Compact Powder">
+                <h3>Armaf Club De Nuit for Women Eau de Parfum Spray</h3>
+                <p>Rs. 4000</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="parfum">
+                <img src="Magnetiq Eau De Parfum, Woody Aromatic Fragrance.jpg" alt="Lipstick">
+                <h3>Magnetiq Eau De Parfum, Woody Aromatic Fragrance</h3>
+                <p>Rs. 12200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="parfum">
+                <img src="Anfar 1950 Dubai Chocolate Biscotti Truffle Eau de Parfum.jpg" alt="Lipstick">
+                <h3>Anfar 1950 Dubai Chocolate Biscotti Truffle Eau de Parfum</h3>
+                <p>Rs. 4500</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="Elegant,Trendy Personality Collar Watch Set Embellished Women Watches.jpg" alt="Eyeliner">
+                <h3>Flormar Eye Shadow Palette</h3>
+                <p>Rs. 2200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="parfum">
+                <img src="Aromatix Forbidden Fruit Eau De Parfum, Oriental Floral Fragrance.webp" alt="Lipstick">
+                <h3>Aromatix Forbidden  Parfum, Oriental Fragrance</h3>
+                <p>Rs. 3000</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="parfum">
+                <img src="Armaf Club De Nuit Perfume Oil for Women - Bergamot.jpg" alt="Lipstick">
+                <h3>Armaf Club De Nuit Perfume Oil for Women - Bergamot Oriental Fragrance</h3>
+                <p>Rs. 3450</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="3pcs New Children's Fashion Fashion Diamond Dial Watch Graduation Season Gift.jpg" alt="Lipstick">
+                <h3>Sara Ali Brown Glazed Eyeshadow</h3>
+                <p>Rs. 3400</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="Loaded more related product results.jpg" alt="Compact Powder">
+                <h3>Clarins Paris Joli Rouge Velvet Camellia</h3>
+                <p>Rs. 1500</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+             <div class="card"   data-category="makeup">
+                <img src="mk02.jpg" alt="Face Serum">
+                <h3>ST London Premium Ultra-</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="grils watches.jpg" alt="Blush">
+                <h3>Essence What A Tint! Lip & Cheek Tint</h3>
+                <p>Rs. 1700</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>     
+            <div class="card" data-category="watches">
+                <img src="4pcs Fashionable And Versatile Women's Quartz Watch.jpg" alt="Lipstick">
+                <h3>Kaligon Beauty Organizer</h3>
+                <p>Rs. 1900</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="fish watches.jpg" alt="Lipstick">
+                <h3>Makeup Revolution Face Large Powder Brush</h3>
+                <p>Rs. 1800</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+            <div class="card" data-category="watches">
+                <img src="Casual Collar Watch Set Embellished Women Watches.jpg" alt="Lipstick">
+                <h3>Makeup Revolution Ultra Blush Palette</h3>
+                <p>Rs. 1200</p>
+                <a href="licture.htm">
+                <button class="btn small">Buy</button>
+                </a>
+            </div>
+    </div>
+</section>
+
+
+
+<!-- FOOTER SECTION  -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h5 class="footer-title">GlowCos</h5>
+            <p>GlowCos brings you premium skincare and cosmetics to enhance your natural beauty.</p>
+        </div>
+        <div class="footer-links">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="parfum.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h5 class="footer-title">Contact</h5>
+            <p>📍 Karachi, Pakistan</p>
+            <p>✉ info@glowcos.com</p>
+            <p>📞 +92 335 1234567</p>
+        </div>
+        <div class="footer-social">
+            <h5 class="footer-title">Follow Us</h5>
+            <div class="social-icons">
+                <a href="#">FB</a>
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+                <a href="#">PT</a>
+            </div>
+        </div>
+    </div>
+    <hr class="footer-line">
+    <div class="footer-copy">© 2025 GlowCos — All Rights Reserved</div>
+</footer>
+</body>
+</html>
